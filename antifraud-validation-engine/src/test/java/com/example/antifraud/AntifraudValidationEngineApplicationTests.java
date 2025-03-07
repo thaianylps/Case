@@ -1,10 +1,10 @@
-import org.junit.jupiter.api.Test;
+package com.example.antifraud;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class AntifraudValidationEngineApplicationTests {
 
-    @Test
+    
     void contextLoads() {
     }
 

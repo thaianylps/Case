@@ -1,6 +1,8 @@
+package com.example.antifraud.model;
+
 public class AntifraudModel {
     private String transactionId;
-    private double amount;
+    private double valor;
     private String userId;
 
     // Getters and Setters
@@ -12,12 +14,12 @@ public class AntifraudModel {
         this.transactionId = transactionId;
     }
 
-    public double getAmount() {
-        return amount;
+    public double getValor() {
+        return valor;
     }
 
-    public void setAmount(double amount) {
-        this.amount = amount;
+    public void setValor(double valor) {
+        this.valor = valor;
     }
 
     public String getUserId() {

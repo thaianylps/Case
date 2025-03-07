@@ -1,24 +1,12 @@
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+package com.example.antifraud.controller;
+
+import com.example.antifraud.service.AntifraudService;
 
 @RestController
-@RequestMapping("/api/antifraud")
+@RequestMapping("/antifraud")
 public class AntifraudController {
 
-    private final AntifraudService antifraudService;
+    @com.example.antifraud.controller.Autowired
+    private AntifraudService antifraudService;
 
-    @Autowired
-    public AntifraudController(AntifraudService antifraudService) {
-        this.antifraudService = antifraudService;
-    }
-
-    @PostMapping("/validate")
-    public ResponseEntity<String> validateTransaction(@RequestBody AntifraudModel antifraudModel) {
-        boolean isFraudulent = antifraudService.checkFraudRisk(antifraudModel);
-        if (isFraudulent) {
-            return ResponseEntity.badRequest().body("Transaction is flagged as fraudulent.");
-        }
-        return ResponseEntity.ok("Transaction is valid.");
-    }
 }
