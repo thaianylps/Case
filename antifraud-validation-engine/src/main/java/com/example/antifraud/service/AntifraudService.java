@@ -21,7 +21,7 @@ public class AntifraudService {
         if (valor <= 0) {
             return true; // Risco de fraude se o valor da transação for inválido
         }
-        return false; // Sem risco de fraude
+        return false; 
         return false;
     }
 
